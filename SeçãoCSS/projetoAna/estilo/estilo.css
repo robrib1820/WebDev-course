@@ -1,0 +1,28 @@
+body {
+    background: #ad4463 url('imagens/fundo.png');
+    width: 68%;
+}
+.conteudo {
+    background-color: white;
+    padding: 10px;
+}
+nav {
+    background-color: #ffcbdb;
+}
+nav ul a {
+    text-decoration: none;
+    list-style: none;
+    display:inline-block;
+    padding: 20px;
+    font-weight: bold;
+    color: #ad4463;
+}
+h2 {
+    color: #ad4463 ;
+}
+.imagem {
+    border: 15px double #ad4463;
+}
+.footer{
+    text-align: center;
+}

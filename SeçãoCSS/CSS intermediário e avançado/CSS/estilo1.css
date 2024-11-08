@@ -1,0 +1,41 @@
+/*************************
+Herança
+*/
+/* body {
+    color: red;
+    font-size: 16px;
+    border: 1px solid blue;
+    background-color: gray;
+    /*
+    - Os elementos como h2, p etc 
+    herdam as formatações dentro do Body
+    - Border e background não são herdados
+    
+    */
+/***************
+Especificidade
+*/
+/* p {
+    color: red /*!important pode usar ele, porém ter cautela;
+
+}*/
+/* p {
+    color: blue;
+}
+- Dois seletores iguais, o último tem prioridade
+- Se um seletor for mais específico que outro,
+  a regra mais específica será aplicada(Tem precedência sobre
+  regras mais gerais)
+*/
+* {
+    color: red;
+} 
+h2 { /* 3 */
+    color: blue;
+}
+h2.verde {/* 2 */
+    color: green;
+}
+h2#amarelo {/* 1 */
+    color: yellow;
+}

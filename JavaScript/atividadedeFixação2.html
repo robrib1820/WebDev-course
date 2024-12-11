@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2 de JavaScript</title>
+    <script>
+        var nome = prompt("Qual o seu nome? ")
+        var altura = prompt("Qual sua altura em centímetros? ")
+        var peso = prompt("Qual o seu peso? ")
+
+        altura = parseFloat(altura)
+        peso = parseFloat(peso)
+        var classificacao = ""
+        var alturaEmMetros = altura / 100
+
+        var indiceMassaCorporal = peso / (alturaEmMetros^2)
+
+        if (indiceMassaCorporal <16) {
+            classificacao = "Baixo peso, muito grave"
+        } else if (indiceMassaCorporal >=16 &&  indiceMassaCorporal <=16.99) {
+            classificacao = "Baixo peso, muito grave"
+        } else if (indiceMassaCorporal >=17 && indiceMassaCorporal <=18.49) {
+            classificacao = "Baixo peso"
+        } else if (indiceMassaCorporal >=18.50 && indiceMassaCorporal <=24.99) {
+            classificacao = "Peso normal"
+        } else if (indiceMassaCorporal >=25 && indiceMassaCorporal <= 29.99) {
+            classificacao = "Sobrepeso"
+        } else if (indiceMassaCorporal >=30 && indiceMassaCorporal <=34.99) {
+            classificacao = "Obesidade grau 1"
+        } else if (indiceMassaCorporal <=35 && indiceMassaCorporal <=39.99) {
+            classificacao = "Obesidade grau 2"
+        } else if (indiceMassaCorporal > 40) {
+            classificacao = "Obesidade grau 3"
+        }
+        
+        var informação = document.write(nome +" possui índice de massa corporal igual a "+ indiceMassaCorporal + ", sendo classificado como: " + classificacao +"!")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

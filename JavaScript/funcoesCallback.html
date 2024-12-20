@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+    <script>
+
+        function exibirArtigo(id, callBackSucesso, callBackErro) {
+            //lógica: recuperar o id via requisição http
+            if (false) {
+                callBackSucesso("Funções de callback em JS", "Funções de callback são muito utilizadas...")
+            } else {
+                callBackErro("Erro ao recuperar os dados.")
+            }
+        }   
+
+        var callBackSucesso = function (titulo, descricao) {
+            document.write("<h1>" + titulo + "</h1>")
+            document.write("<hr>")
+            document.write("<p>" + descricao + "</p>")
+
+        }
+        var callBackErro = function (erro) {
+            document.write("<p><b>Erro:</b>" + erro + "</p>")
+        }
+        exibirArtigo(1, callBackSucesso, callBackErro) //Aqui não estou solicitando a execução das funções no parâmetro, pois não coloquei o parênteses, pois no caso queremos somente eviar a função de fato.
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

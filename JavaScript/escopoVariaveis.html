@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        // 3 Escopos:
+        // Global, função, bloco
+
+        var serie = "Friends"
+        //escopo de bloco - variáveis aqui dentro sofrem elevação para o global, hoisting
+        if (true) {
+            var serie2 = "Game of thrones"
+            document.write(serie)
+        }
+        document.write(serie2)
+
+        document.write("<br />")
+        function x() { // as variáveis dentro das funções não sofrem alteração. Porém Blocos dentro da função sofrem elevaçã para o escopo da função
+            var serie3 = "The walking Dead"
+            document.write(serie)
+            document.write(serie2)
+        }
+        x()
+        document.write("<br />")
+        document.write(serie3)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

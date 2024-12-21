@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Atividade fixação do conteúdo</title>
+
+    <script>
+        var n1 = parseInt(prompt("Digite um número: "))
+        var operacao = prompt("Soma ou Subtração?")
+        var n2 = parseInt(prompt("Digite outro número: "))
+        
+        var soma = function (n1, n2, operacao) {
+            if (operacao == "Soma") {
+                r = n1 + n2 
+            } else {
+                r = n1 - n2
+            }
+            return r
+        }
+        document.write("O resultado é: " + soma(n1, n2, operacao))
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo Eventos</title>
+
+    <script>
+        function distribuiCaracter() {
+            //Selecionar valor digitado
+            var caracter = document.getElementById("entrada").value
+            //Limpar o campo de digitação
+            document.getElementById("entrada").value = ""
+
+            //limpar espaços em branco nas extremidades da string
+            caracter.trim()
+            switch(caracter) {
+                case "0":
+                case "1":
+                case "2":
+                case "3":
+                case "4":
+                case "5":
+                case "6":
+                case "7":
+                case "8":
+                case "9":
+                    // Adicionar o caracter no campo referente a números
+                    document.getElementById("apenas_numeros").value = caracter
+                    break;
+                default:
+                    //Adicionar o caracter no campo referente a letras
+                    document.getElementById("apenas_letras").value = caracter
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <input id="entrada" type="text" placeholder="Digite um caracter aqui" onkeyup="distribuiCaracter()">
+    <hr />
+    <span>Letras: </span>
+    <input type="text" name="" id="apenas_letras" disabled>
+    <span>Números: </span>
+    <input type="text" name="" id="apenas_numeros" disabled>
+</body>
+</html>

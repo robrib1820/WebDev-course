@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceito de Var e Let</title>
+
+    <script>
+        // 3 escopos: global, função e bloco
+
+        //Variáveis var global ficam disponíveis para tudo
+        // variáveis var dentro de função ficam disponíveis somente dentro da função e de seus blocos
+        // Variáveis var dentro de um escopo de bloco sofrem o hosting(elevação), seja para a função ou o escopo global onde ela estiver.
+        // var serie = "friends"
+        // function x() {
+        //     var serie = "Game of Thrones"
+        //     console.log("Função: " + serie)
+        //     if (true) {
+        //         console.log("Bloco dentro da função: " + serie)
+        //     }
+        // }
+        // if(true) {
+        //     console.log("Global: " + serie)
+        // }
+
+        // x()
+
+        // function x(params) {
+        //     if(true) {
+
+        //     }
+        // }
+        // x()
+
+        // // essa variável serie pode ser usada dentro sa função, pois ela se eleva ao escopo global(tornando-se assim disponível para a função)
+        // if(true) {
+        //     var serie = "The walking dead"
+        // }
+
+        // LET variável 
+        // if (true) {
+        //     let serie = "Friends"
+        //     console.log(serie)
+        // }
+        // console.log(serie)
+        
+        // Possíveis bugs que o let pode solucionar!
+        let serie = "Friends"
+
+        {
+            let serie = "The walking dead"
+            console.log("Dentro do bloco: " + serie)
+        }
+        console.log( "Fora do bloco: " + serie)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando</title>
+
+    <style>
+        .amarelo {
+            background-color: #ffff00;
+        }
+        .vermelho {
+            background-color: #ff0000;
+        }
+        .verde {
+            background-color: green;
+        }
+        
+    </style>
+    <script>
+        function mudarCor(cor) {
+            document.getElementById("entrada").className = "amarelo"
+        }
+
+        function validacaoCor() {
+            let caracter = document.getElementById("entrada")
+            console.log(caracter.value.length)
+            console.log(caracter)
+            if(caracter.value.length < 3) {
+                caracter.className = "vermelho"
+            } else {
+                caracter.className = "verde"
+            }
+            console.log(caracter)
+        }
+
+    </script>
+</head>
+<body>
+    <div class="caixa">
+        <h3>Escreva algo</h3>
+        <input id="entrada" onfocus="mudarCor()" onblur="validacaoCor()" type="text">
+        
+    </div>
+</body>
+</html>
